@@ -216,3 +216,43 @@
   .cta-final p { color: var(--ink-soft); }
   a { text-decoration: none; }
 }
+
+/* Хаб-страница материалов */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 10px;
+}
+.hub-card {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.hub-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.hub-card__num {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.hub-card__title { font-family: var(--font-head); font-size: 23px; font-weight: 600; margin-bottom: 12px; }
+.hub-card__lead { color: var(--ink-soft); font-size: 15px; flex: 1; margin-bottom: 22px; }
+.hub-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 15px;
+}
+.hub-card__link:hover { color: var(--accent-dark); }
+
+@media (max-width: 860px) {
+  .hub-grid { grid-template-columns: 1fr; }
+}
